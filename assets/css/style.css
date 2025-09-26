@@ -323,11 +323,11 @@ body {
 
 .bi-house,
 .bi-calendar-week,
-.bi-images,
-.bi-pen,
-.bi-gift,
-.bi-chat-text,
-.bi-calendar-minus {
+.bi-alarm,
+.bi-image,
+.bi-journal-check,
+.bi-whatsapp,
+.bi-check2-square {
   font-size: 20px !important;
 }
 
