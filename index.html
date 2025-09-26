@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tomiko Gathering 2025 Energizing Future</title>
+    <!-- Favicon -->
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous" />
+    <!-- BS5 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- LightBox -->
+    <link rel="stylesheet" href="./assets/css/lightbox.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Modal -->
+    <div class="container my-modal">
+      <div
+        class="modal fade"
+        id="onload"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <!-- Add this line to your code -->
+        <div
+          class="modal-dialog modal-fullscreen d-flex flex-column min-vh-100 min-vw-100">
+          <div class="modal-content my-modal-content">
+            <img
+              class="decoration-one-image"
+              src="./assets/img/top-left.png"
+              alt="decoration-one" />
+            <img
+              class="decoration-two-image"
+              src="./assets/img/bottom-right.png"
+              alt="decoration-two" />
+            <div
+              class="modal-body d-flex flex-column justify-content-center align-items-center text-center">
+              <img
+                class="logo animate-fade-up"
+                src="./assets/img/logo.png"
+                alt="logo" />
+              <h1 class="nama-title-modal">
+                tomiko gathering 2025 energizing future
+              </h1>
+              <h2 class="kepada-yth">Kepada Yth.</h2>
+              <h2 class="nama-tamu">Nama Toko</h2>
+              <button
+                type="button"
+                class="btn btn-primary buka-undangan-btn mt-2"
+                data-bs-dismiss="modal"
+                onClick="togglePlay()">
+                Buka Undangan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal End -->
+    <!-- Hero -->
+    <section id="acara">
+      <div class="container w-100">
+        <h1>Acara</h1>
+        <h2>Minggu, 19 Oktober 2025</h2>
+        <h3>Pukul 18:00 WIB - 21:00 WIB</h3>
+        <h4>Aryaduta Lippo Village</h4>
+        <h5>Ballroom Ebony</h5>
+        <h6>
+          Lippo Village, Boulevard Jenderal Sudirman No. 401, Kelurahan
+          Bencongan, Kecamatan Kelapa Dua, Kabupaten Tangerang, Banten 15115.
+        </h6>
+        <!-- <div class="container countdown-container">
+        <div class="main">
+          <div class="item">
+            <h4 class="count_down">0</h4>
+            <h4 class="countdown-text">Hari</h4>
+          </div>
+          <div class="item">
+            <h4 class="count_down">0</h4>
+            <h4 class="countdown-text">Jam</h4>
+          </div>
+          <div class="item">
+            <h4 class="count_down">0</h4>
+            <h4 class="countdown-text">Menit</h4>
+          </div>
+          <div class="item">
+            <h4 class="count_down">0</h4>
+            <h4 class="countdown-text">Detik</h4>
+          </div>
+        </div>
+      </div> -->
+      </div>
+    </section>
+    <!-- Hero End -->
+    <!-- Floating Button -->
+    <div class="container floating-button">
+      <audio id="myAudio" loop>
+        <source
+          src="./assets/song/You're Still The One - Shania Twain (Lirik Lagu Terjemahan).mp3"
+          type="audio/mp3" />
+      </audio>
+
+      <div id="player-container" class="floats">
+        <div id="play-pause" class="play my-float">Play</div>
+      </div>
+    </div>
+    <!-- Floating Button End -->
+    <!-- Bottom Nav -->
+    <section id="bottomNav">
+      <div class="container">
+        <header class="header">
+          <div class="container">
+            <nav class="bottom-nav">
+              <div class="bottom-nav-item active">
+                <div class="bottom-nav-link">
+                  <a href="#acara" aria-label="House Icon for Acara Section">
+                    <i class="bi bi-calendar-week"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom-nav-item">
+                <div class="bottom-nav-link">
+                  <a
+                    href="#rundown"
+                    aria-label="People Icon for Rundown Section">
+                    <i class="bi bi-calendar-week"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom-nav-item">
+                <div class="bottom-nav-link">
+                  <a
+                    href="#galeri"
+                    aria-label="Calendar Icon for Galeri Section">
+                    <i class="bi bi-calendar-minus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom-nav-item">
+                <div class="bottom-nav-link">
+                  <a
+                    href="#ourGallery"
+                    aria-label="Images Icon for Our Gallery Section">
+                    <i class="bi bi-images"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom-nav-item">
+                <div class="bottom-nav-link">
+                  <a href="#kontak" aria-label="Gift Icon for Gift Section">
+                    <i class="bi bi-gift"></i>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+      </div>
+    </section>
+    <!-- Bottom Nav End -->
+    <!-- Rundown -->
+    <section id="rundown">
+      <div class="container mt-5">
+        <h1
+          class="text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="1000">
+          Rundown Acara
+        </h1>
+
+        <div class="row">
+          <div
+            class="col-md-6"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="300">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="card-title">18:00 WIB</h2>
+                <h3>Registrasi Peserta</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="300">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="card-title">19:00 WIB</h2>
+                <h3>Makan Malam</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-md-6"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="300">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="card-title">20:00 WIB</h2>
+                <h3>Peluncuran Produk</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="300">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="card-title">20:30 WIB</h2>
+                <h3>Pembagian Doorprize</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 6 full width -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="card-title">21:00 WIB</h2>
+                <h3>Penutup</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Rundown End -->
+    <!-- Galeri -->
+    <section id="galeri">
+      <div class="container py-5">
+        <h1 class="text-center mb-5">Galeri</h1>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-01.jpg"
+              class="img-fluid rounded shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-01.jpg"
+              alt="Foto 1" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-02.jpg"
+              class="img-fluid rounded shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-02.jpg"
+              alt="Foto 2" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-03.jpg"
+              class="img-fluid rounded shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-03.jpg"
+              alt="Foto 3" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-04.jpg"
+              class="img-fluid rounded shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-04.jpg"
+              alt="Foto 4" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-04.jpg"
+              class="img-fluid rounded shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-04.jpg"
+              alt="Foto 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Bootstrap -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <!-- Tombol close -->
+          <button
+            type="button"
+            class="btn-close btn-close-white ms-auto me-2 mt-2"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <div class="modal-body p-0 text-center">
+            <img
+              id="modalImage"
+              src=""
+              class="img-fluid rounded shadow"
+              alt="Preview" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Ganti gambar modal sesuai thumbnail yang diklik
+      document.querySelectorAll(".thumb").forEach((img) => {
+        img.addEventListener("click", function () {
+          document.getElementById("modalImage").src = this.dataset.full;
+        });
+      });
+    </script>
+    <!-- Galeri End -->
+    <!-- Reservasi -->
+    <section id="reservasi">
+      <div class="container">
+        <h1 data-aos="fade-down" data-aos-delay="900">Reservasi</h1>
+        <div class="container" data-aos="fade-up" data-aos-delay="1200">
+          <h2>
+            Pastikan anda mengisi form konfirmasi kehadiran <br />
+            dengan menekan tombol dibawah ini.
+          </h2>
+          <button
+            type="button"
+            class="btn btn-primary mb-4 konfirmasi-kehadiran-btn mt-2"
+            data-bs-dismiss="modal">
+            Konfirmasi Kehadiran
+          </button>
+          <h3>Informasi Penting</h3>
+          <p>
+            Satu undangan berlaku <br />
+            untuk 2 (dua) orang
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Reservasi End -->
+    <!-- Kontak -->
+    <section id="kontak">
+      <div class="container">
+        <h1 data-aos="fade-down" data-aos-delay="900">Contact Person</h1>
+        <h2 class="mb-4">
+          Hubungi Contact Person kami jika ada hal <br />yang ingin ditanyakan
+        </h2>
+        <h3 class="mb-4">Tomiko Customer Service</h3>
+        <div
+          class="btn-groups d-flex flex-column justify-content-center align-items-center w-100">
+          <a href="" class="btn btn-primary mb-4 w-25">WhatsApp 1</a>
+          <a href="" class="btn btn-primary w-25">WhatsApp 2</a>
+        </div>
+      </div>
+    </section>
+    <!-- Kontak End -->
+    <!-- Thanks -->
+    <section id="thanks">
+      <div class="container">
+        <h1>test</h1>
+      </div>
+    </section>
+    <!-- Thanks End -->
+    <!-- My JS -->
+    <script src="./assets/js/main.js"></script>
+    <!-- LightBox -->
+    <script src="./assets/js/lightbox-plus-jquery.js"></script>
+    <!-- Akaricons -->
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <!-- Clipboard JS -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
