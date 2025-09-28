@@ -437,12 +437,21 @@ body {
 
 @media only screen and (max-width: 900px) {
   #acara h1 {
-    font-family: Beau-Rivage;
     font-style: normal;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 30px;
     margin: 20px 0;
     letter-spacing: 3px;
+  }
+  #acara h6 {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px; /* lebih besar dikit biar seimbang */
+    font-weight: 500; /* bold */
+    color: #ffffff; /* putih */
+    margin: 10px auto 25px auto; /* auto biar center */
+    text-align: center;
+    line-height: 30px;
   }
 }
 
@@ -655,6 +664,15 @@ body {
   background-color: #ccaa2a;
   border-color: transparent;
   color: #16161a;
+  padding: 20px 50px;
+  font-weight: 600;
+}
+
+#reservasi .konfirmasi-kehadiran-btn:hover {
+  background-color: #9d7f15;
+  border-color: transparent;
+  color: #16161a;
+  transition: 0.4s ease-in;
 }
 
 #reservasi h3 {
@@ -721,6 +739,26 @@ body {
   transition: 0.5s ease-in;
 }
 
+@media only screen and (max-width: 900px) {
+  .whatsapp-button {
+    width: 100%;
+    background-color: #ccaa2a;
+    border-color: transparent;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #9d7f15;
+    border-color: transparent;
+    transition: 0.5s ease-in;
+  }
+}
+
 /* Kontak End */
 
 /* Thanks */
@@ -775,7 +813,7 @@ body {
 }
 
 #thanks .icon-groups a i:hover {
-  color: #ccaa2a;
+  color: #9d7f15;
   font-size: 34px;
   transition: all 0.2s ease-in;
 }
