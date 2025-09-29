@@ -4,29 +4,35 @@ window.onload = () => {
 };
 
 // Countdown
-let endDateElm = "12 Februari 2024 00:00 AM";
-let countDownItem = Array.from(document.querySelectorAll(".count_down"));
+// Target waktu acara
+const targetDate = new Date("Oct 19, 2025 18:00:00 GMT+0700").getTime();
 
-function countDown() {
-  let endDate = new Date(endDateElm);
-  let newDate = new Date();
-  let dateDiff = (endDate - newDate) / 1000;
-  if (dateDiff > 0) {
-    let day = Math.floor(dateDiff / 3600 / 24);
-    let hour = Math.floor(dateDiff / 3600) % 24;
-    let min = Math.floor(dateDiff / 60) % 60;
-    let sec = Math.floor(dateDiff % 60);
-    countDownItem[0].textContent = day;
-    countDownItem[1].textContent = hour;
-    countDownItem[2].textContent = min;
-    countDownItem[3].textContent = sec;
-  } else {
-    clearInterval(stop);
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML =
+      "<p>Acara sudah dimulai!</p>";
+    return;
   }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
 }
-let stop = setInterval(() => {
-  countDown();
-}, 1000);
+
+// Update setiap detik
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
 // Music
 let myAudio = document.getElementById("myAudio");
