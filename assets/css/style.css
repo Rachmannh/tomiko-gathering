@@ -211,6 +211,12 @@ body {
     bottom: 0;
     right: 0;
   }
+  .logo {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin-bottom: 24px;
+  }
 }
 
 /* Modal End */
@@ -233,7 +239,7 @@ body {
   border: transparent;
   text-align: center;
   font-size: 30px;
-  box-shadow: 2px 2px 2px #f8d718;
+  box-shadow: 2px 2px 2px #eeda8e;
   z-index: 100;
 }
 
@@ -275,7 +281,7 @@ body {
   height: 60px;
   border-radius: 50px;
   margin: 0 auto 0 auto;
-  background-color: #252a32;
+  background-color: #e8d797;
   z-index: 99;
 }
 
@@ -291,7 +297,7 @@ body {
     width: 90%;
     height: 60px;
     margin: 0 auto 0 auto;
-    background-color: #252a32;
+    background-color: #e8d797;
     z-index: 99;
   }
 }
@@ -303,7 +309,7 @@ body {
   justify-content: center;
   text-align: center;
   font-size: 0.8rem;
-  color: var(--heading-color);
+  color: var(--bg-color);
 }
 
 .bottom-nav-link {
@@ -313,12 +319,12 @@ body {
 }
 
 .bottom-nav-link a {
-  color: var(--heading-color);
+  color: #775e02;
 }
 
 .bottom-nav-item,
 .active {
-  color: var(--tertiary-color) !important;
+  color: var(--bg-color) !important;
 }
 
 .bi-house,
@@ -361,17 +367,17 @@ body {
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 18px;
-  margin: 10px 0 20px 0;
+  font-size: 16px;
+  margin: 5px 0 10px 0;
   animation: fadeUp 1.5s ease-in-out;
   color: #e8d797;
 }
 
 #acara h2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 18px !important;
   font-weight: 400;
-  margin: 20px 0 25px 0;
+  margin: 5px 0 10px 0;
   animation: fadeUp 2.8s;
   color: #ffffff;
 }
@@ -381,32 +387,32 @@ body {
   color: #ffffff; /* putih */
   font-size: 18px !important;
   font-weight: 400;
-  margin: 20px 0 25px 0;
+  margin: 5px 0 10px 0;
 }
 
 #acara h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: 700;
   color: #e8d797;
-  margin: 10px 0 25px 0;
+  margin: 5px 0 5px 0;
 }
 
 #acara h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 500;
   color: #ffffff;
-  margin: 10px 0 25px 0;
+  margin: 5px 0 5px 0;
 }
 
 #acara h6 {
   width: 458px;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; /* lebih besar dikit biar seimbang */
+  font-size: 14px; /* lebih besar dikit biar seimbang */
   font-weight: 500; /* bold */
   color: #ffffff; /* putih */
-  margin: 10px auto 25px auto; /* auto biar center */
+  margin: 5px auto 5px auto; /* auto biar center */
   text-align: center;
   line-height: 30px;
 }
@@ -441,14 +447,14 @@ body {
   #acara h1 {
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    margin: 20px 0;
+    font-size: 18px;
+    margin: 10px 0;
     letter-spacing: 3px;
   }
   #acara h6 {
     width: 100%;
     font-family: "Open Sans", sans-serif;
-    font-size: 18px; /* lebih besar dikit biar seimbang */
+    font-size: 14px; /* lebih besar dikit biar seimbang */
     font-weight: 500; /* bold */
     color: #ffffff; /* putih */
     margin: 10px auto 25px auto; /* auto biar center */
@@ -540,10 +546,12 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+
   display: flex;
-  flex-direction: column; /* ✅ biar urut ke bawah */
-  align-items: center; /* ✅ tengah secara horizontal */
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center; /* ✅ tengah vertical */
+  align-items: center; /* ✅ tengah horizontal */
+
   padding: 50px 0;
   background-image: url("../img/bg-image.png");
   background-position: center;
@@ -559,13 +567,16 @@ body {
   font-size: 20px;
   margin-bottom: 60px;
   color: #e8d797;
+  text-align: center; /* ✅ teks h1 juga di tengah */
+  width: 100%; /* ✅ biar center full */
 }
 
 .timeline {
   position: relative;
-  max-width: 700px;
+  max-width: 400px;
   width: 100%;
   padding-left: 40px;
+  margin: 0 auto; /* ✅ pastikan blok timeline center */
 }
 
 /* Garis vertikal */
@@ -653,6 +664,13 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 60px;
+  color: #e8d797;
+}
+
+.head-unit-image {
+  width: 100%;
+  height: 190px !important; /* tinggi fix */
+  object-fit: cover; /* biar gambar proporsional, dipotong kalau perlu */
 }
 
 /* Pointer saat hover */
@@ -696,6 +714,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 40px;
+  color: #e8d797;
 }
 
 #reservasi h2 {
@@ -758,14 +777,23 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  color: #e8d797;
 }
 
 #kontak h2 {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 40px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+#kontak h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 20px;
   line-height: 30px;
 }
 
