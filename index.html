@@ -56,7 +56,7 @@
                 alt="logo" />
               <h1 class="nama-title-modal">GATHERING 2025 ENERGIZING FUTURE</h1>
               <h2 class="kepada-yth">Kepada Yth.</h2>
-              <h2 class="nama-tamu">Jaya Abadi Center</h2>
+              <h2 class="nama-tamu"></h2>
               <button
                 type="button"
                 class="btn btn-primary buka-undangan-btn mt-2"
@@ -658,6 +658,31 @@
           })
           .catch((err) => console.error("❌ Error!", err.message));
       });
+    </script>
+
+    <script>
+      const scriptsURL =
+        "https://script.google.com/macros/s/AKfycbyKI-j1HxLKGheh-em9MSTHXJ1xw82bUj4P3Q5e5M903JBxZ5g-KCrMVXVl56RaXyE/exec";
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const namaQuery = urlParams.get("tamu");
+
+      if (namaQuery) {
+        fetch(scriptsURL + "?tamu=" + encodeURIComponent(namaQuery))
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.nama_toko) {
+              document.querySelector(".nama-tamu").textContent = data.nama_toko;
+            } else {
+              document.querySelector(".nama-tamu").textContent =
+                "Tamu Undangan";
+            }
+          })
+          .catch((err) => {
+            console.error("Error:", err);
+            document.querySelector(".nama-tamu").textContent = "Tamu Undangan";
+          });
+      }
     </script>
 
     <!-- Kehadiran Modal End -->
