@@ -56,7 +56,7 @@
                 alt="logo" />
               <h1 class="nama-title-modal">GATHERING 2025 ENERGIZING FUTURE</h1>
               <h2 class="kepada-yth">Kepada Yth.</h2>
-              <h2 class="nama-tamu">Nama Toko</h2>
+              <h2 class="nama-tamu">Jaya Abadi Center</h2>
               <button
                 type="button"
                 class="btn btn-primary buka-undangan-btn mt-2"
@@ -72,6 +72,8 @@
     <!-- Modal End -->
     <!-- Hero -->
     <section id="acara">
+      <img class="left-wink" src="./assets/img/left.webp" alt="left.webp" />
+      <img class="right-wink" src="./assets/img/right.webp" alt="right.webp" />
       <div class="container text-center">
         <h1 class="mt-4">Acara</h1>
         <h2>Okt</h2>
@@ -202,40 +204,42 @@
     <!-- Bottom Nav End -->
     <!-- Rundown -->
     <section id="timeline">
-      <h1 class="mt-4">Susunan Acara</h1>
-      <div class="timeline">
+      <h1 class="mt-4" data-aos="fade-up" data-aos-duration="1000">
+        Susunan Acara
+      </h1>
+      <div class="timeline" data-aos="fade-up" data-aos-duration="1000">
         <div class="timeline-item">
           <div class="timeline-time">18:00</div>
           <div class="timeline-content">
-            <h5 class="mb-2">Registrasi Peserta</h5>
+            <h5 class="mb-2">Pendaftaran</h5>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-time">19:00</div>
+          <div class="timeline-time">18:30</div>
           <div class="timeline-content">
             <h5>Makan Malam</h5>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-time">20:00</div>
+          <div class="timeline-time">19:30</div>
           <div class="timeline-content">
-            <h5>Peluncuran Produk</h5>
+            <h5>Sambutan dan Peluncuran Produk</h5>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-time">20:30</div>
+          <div class="timeline-time">20:00</div>
           <div class="timeline-content">
-            <h5>Pembagian Doorprize</h5>
+            <h5>Hiburan dan Hadiah</h5>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-time">21:00</div>
           <div class="timeline-content">
-            <h5>Penutupan Acara</h5>
+            <h5>Selesai</h5>
           </div>
         </div>
       </div>
@@ -330,6 +334,24 @@
               data-bs-toggle="modal"
               data-bs-target="#imageModal"
               data-full="./assets/img/BAHAN FOTO-11.jpg"
+              alt="Foto 4" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-13.jpg"
+              class="img-fluid rounded head-unit-image shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-14.jpg"
+              alt="Foto 4" />
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="./assets/img/BAHAN FOTO-14.jpg"
+              class="img-fluid rounded head-unit-image shadow thumb"
+              data-bs-toggle="modal"
+              data-bs-target="#imageModal"
+              data-full="./assets/img/BAHAN FOTO-14.jpg"
               alt="Foto 4" />
           </div>
           <div class="col-6 col-md-3">
@@ -491,18 +513,20 @@
     <!-- Thanks -->
     <section id="thanks">
       <div class="container">
-        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="2300">
+        <h2 class="mb-4" data-aos="fade-up" data-aos-duration="1000">
           Mari bersama kita wujudkan semangat kolaborasi <br />
           dan energi baru untuk masa depan yang lebih gemilang. <br />
           Kehadiran Bapak / Ibu akan menjadi bagian penting <br />
           dalam perjalanan ini.
         </h2>
 
-        <h3 data-aos="fade-up" data-aos-delay="2600">
+        <h3 data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
           Atas perhatian dan partisipasinya. kami ucapkan terimakasih.
         </h3>
 
-        <p data-aos="fade-up" data-aos-delay="2800">Made by Urnatech Studio</p>
+        <p data-aos="fade-up" data-aos="fade-up" data-aos-duration="1000">
+          Made by Urnatech Studio
+        </p>
 
         <div
           class="icon-groups d-flex flex-row justify-content-center align-items-center text-center"
@@ -551,12 +575,12 @@
                   placeholder="Nama" />
               </div>
               <div class="mb-3">
-                <label for="grup" class="form-label">Grup</label>
+                <label for="toko" class="form-label">Nama Toko</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="grup"
-                  placeholder="Grup" />
+                  id="toko"
+                  placeholder="Nama Toko" />
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">+62</span>
@@ -608,12 +632,12 @@
 
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbx5iE8zum2e2Gdiuhb0AKwu3vI4-3_kiikjINQkloVDdjTWeGTuHySUbbA3ak_E2n3R-w/exec"; // ganti dengan URL Web App dari Google Apps Script
+        "https://script.google.com/macros/s/AKfycbxLzAihpDkCFOx1VwmM7PpLPZZous1WO4Ecv3K4SJ9i2DBdKrTkNuaykE0FnJj7TxtBiw/exec";
 
       document.getElementById("btnSave").addEventListener("click", () => {
-        const formData = new FormData();
+        const formData = new URLSearchParams();
         formData.append("nama", document.getElementById("nama").value.trim());
-        formData.append("grup", document.getElementById("grup").value.trim());
+        formData.append("toko", document.getElementById("toko").value.trim());
         formData.append("nowa", document.getElementById("nowa").value.trim());
         formData.append(
           "kehadiran",
@@ -628,11 +652,9 @@
           .then((res) => res.text())
           .then((msg) => {
             alert("✅ Data berhasil dikirim!");
-            document.getElementById("nama").value = "";
-            document.getElementById("grup").value = "";
-            document.getElementById("nowa").value = "";
-            document.getElementById("kehadiran").value = "==Pilih Kehadiran==";
-            document.getElementById("ucapan").value = "";
+
+            // reset form
+            document.getElementById("myForm").reset();
           })
           .catch((err) => console.error("❌ Error!", err.message));
       });
