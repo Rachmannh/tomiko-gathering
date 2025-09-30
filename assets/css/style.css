@@ -51,6 +51,7 @@ body {
   height: auto;
   font-family: "Libre Caslon Text", serif !important;
   overflow-x: hidden !important;
+  z-index: 999 !important;
 }
 
 @keyframes winkers {
@@ -65,46 +66,22 @@ body {
   }
 }
 
-.left-wink {
-  position: fixed; /* ✅ ikut scroll */
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%; /* penuh dari atas sampai bawah */
-  object-fit: cover; /* biar gambar proporsional */
-  animation: winkers 2s ease-in-out infinite;
-}
-
+.left-wink,
 .right-wink {
-  position: fixed; /* ✅ ikut scroll */
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 200px;
   height: 100%;
+  width: 200px;
   object-fit: cover;
   animation: winkers 2s ease-in-out infinite;
+  z-index: -1 !important; /* ✅ selalu di belakang semua section */
 }
 
-@media only screen and (max-width: 900px) {
-  .left-wink {
-    position: fixed; /* ✅ ikut scroll */
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%; /* penuh dari atas sampai bawah */
-    object-fit: cover; /* biar gambar proporsional */
-    animation: winkers 2s ease-in-out infinite;
-  }
-
-  .right-wink {
-    position: fixed; /* ✅ ikut scroll */
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100%;
-    object-fit: cover;
-    animation: winkers 2s ease-in-out infinite;
-  }
+.left-wink {
+  left: 0;
+}
+.right-wink {
+  right: 0;
 }
 
 /* Modal */
@@ -267,7 +244,7 @@ body {
   }
   .logo {
     position: relative;
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-bottom: 24px;
   }
@@ -395,6 +372,7 @@ body {
 /* Hero */
 
 #acara {
+  position: relative;
   width: 100%;
   height: 100vh;
   background-image: url("../img/bg-image.png");
@@ -408,7 +386,11 @@ body {
   align-items: center;
   text-align: center;
   color: #fcfcfc;
-  z-index: 98 !important;
+}
+
+.acara-container {
+  position: relative;
+  z-index: 999 !important;
 }
 
 #acara p {
@@ -499,6 +481,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   #acara {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-image: url("../img/bg-image-mobile.png");
@@ -612,19 +595,24 @@ body {
 /* timeline */
 
 #timeline {
-  position: relative;
   width: 100%;
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* ✅ tengah vertical */
-  align-items: center; /* ✅ tengah horizontal */
+  height: 100vh;
   background-image: url("../img/bg-image.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fcfcfc;
+}
+
+.susunan {
+  position: relative;
+  z-index: 999 !important;
 }
 
 #timeline h1 {
@@ -706,6 +694,8 @@ body {
 
 @media only screen and (max-width: 900px) {
   #timeline {
+    width: 100%;
+    height: 80vh;
     background-image: url("../img/bg-image-mobile.png");
   }
 }
@@ -738,6 +728,11 @@ body {
   font-size: 20px;
   margin-bottom: 60px;
   color: #e8d797;
+}
+
+.galeri-row {
+  position: relative;
+  z-index: 999 !important;
 }
 
 .head-unit-image {
@@ -790,6 +785,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   padding: 60px 0; /* kasih napas biar ga nempel */
+}
+
+.reservasi-container {
+  position: relative;
+  z-index: 999 !important;
 }
 
 #reservasi h1 {
@@ -860,6 +860,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   padding: 60px 0; /* kasih napas biar ga nempel */
+}
+
+.kontak-container {
+  position: relative;
+  z-index: 999 !important;
 }
 
 #kontak h1 {
@@ -946,6 +951,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: 0;
+}
+
+.thanks-container {
+  position: relative;
+  z-index: 999 !important;
 }
 
 #thanks h2 {
